@@ -4,15 +4,7 @@ const validate = require("mongoose-validator");
 const bookNameValidator = [
   validate({
     validator: "isLength",
-    arguments: [3, 50],
-    message: "Name should be between 3 and 50 characters",
-  }),
-];
-
-const bookDescriptionValidator = [
-  validate({
-    validator: "isLength",
-    arguments: [3, 500],
+    arguments: [3, 200],
     message: "Name should be between 3 and 50 characters",
   }),
 ];
@@ -25,7 +17,6 @@ const bookSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    validate: bookDescriptionValidator,
   },
   publishDate: {
     type: Date,

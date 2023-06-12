@@ -5,7 +5,7 @@ const Book = require("./book");
 const nameValidator = [
   validate({
     validator: "isLength",
-    arguments: [3, 20],
+    arguments: [3, 50],
     message: "Name should be between 3 and 50 characters",
   }),
 ];
